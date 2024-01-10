@@ -7,4 +7,4 @@ def home(request):
 #render(request,"prueba.html")
 
 def consulproducts(request):
-    return render(request, "products.html")
+    return render(request, "productos.html")
