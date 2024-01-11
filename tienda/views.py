@@ -12,3 +12,9 @@ def consulproducts(request):
     return render(request, "productos.html", {
         'productos': productos
     })
+    
+def guardar(request):
+    nombre= request.POST["nombre"]
+    precio= request.POST["precio"]
+    descripcion= request.POST["description"]
+    
