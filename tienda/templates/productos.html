@@ -5,14 +5,19 @@
     <h2 class="text-center">PRODUCTOS</h2>
 
     <table class="table table-info">
-        <tr>
+        <tr class= "table-dark">
             <th>Nombre</th>
             <th>Precio</th>
             <th>Descripción</th>
             <th></th>
         </tr>
         {% for producto in productos%}
-        {{producto.nombre}}
+            <tr>
+                  <td>{{producto.nombre}}</td>
+                  <td>{{producto.precio}}</td> 
+                  <td>{{producto.descripcion}}</td> 
+                  <td>{{producto.nombre}}</td>    
+            </tr>
     {% endfor %}
     </table>
 
