@@ -4,8 +4,16 @@
 
     <h2 class="text-center">PRODUCTOS</h2>
 
-    {% for producto in productos%}
+    <table class="table table-info">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+            <th></th>
+        </tr>
+        {% for producto in productos%}
         {{producto.nombre}}
     {% endfor %}
+    </table>
 
 {%endblock%}
