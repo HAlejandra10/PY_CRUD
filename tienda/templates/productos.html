@@ -4,6 +4,21 @@
 
     <h2 class="text-center">PRODUCTOS</h2>
 
+
+    <form class="w-50 shadow mx-auto p-4 m-3" method="post">
+        Nombre: <input type="text" name="nombre" class="form-control my-2"/>
+
+        Precio: <input type="number" name="precio" class="form-control" my-2/>
+
+        Descripción: 
+        <textarea class="form-control my-2" name="description">
+             
+        </textarea>
+
+        <input type="submit" value="Guardar" class="btn btn-primary"/>
+
+    </form>
+
     <table class="table table-light w-75 mx-auto text-center">
         <tr class= "table-dark">
             <th>Nombre</th>
@@ -15,8 +30,8 @@
             <tr>
                   <td>{{producto.nombre}}</td>
                   <td>{{producto.precio}}</td> 
-                  <td>{{producto.descripcion}}</td> 
-                  <td>{{producto.nombre}}</td>    
+                  <td>{{producto.description}}</td> 
+                  <td></td>    
             </tr>
     {% endfor %}
     </table>
