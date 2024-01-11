@@ -19,5 +19,6 @@ def guardar(request):
     descrip= request.POST["description"]
     p = Productos(nombre= n, precio=price, description=descrip) #crear product ,el nombre= es el mismo nombre que está en models.py
     p.save()
+    return redirect('')
     
     
