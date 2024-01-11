@@ -4,4 +4,8 @@
 
     <h2 class="text-center">PRODUCTOS</h2>
 
+    {% for producto in productos%}
+        {{producto.nombre}}
+    {% endfor %}
+
 {%endblock%}
