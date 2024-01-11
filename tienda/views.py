@@ -14,7 +14,9 @@ def consulproducts(request):
     })
     
 def guardar(request):
-    nombre= request.POST["nombre"]
-    precio= request.POST["precio"]
-    descripcion= request.POST["description"]
+    n= request.POST["nombre"]
+    price= request.POST["precio"]
+    descrip= request.POST["description"]
+    p = Productos(nombre= n, precio=price, description=descrip) #crear product ,el nombre= es el mismo nombre que está en models.py
+    
     
