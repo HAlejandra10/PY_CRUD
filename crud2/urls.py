@@ -23,5 +23,6 @@ urlpatterns = [
     #path('', views.hola ),
     path('', views.home, name="inicio"),
     path('productos', views.consulproducts, name="consultar"),
-    path('productos/guardar', views.guardar, name="guardar")
+    path('productos/guardar', views.guardar, name="guardar"),
+    path('productos/guardar/<int:id>', views.eliminar, name="eliminar")
 ]
