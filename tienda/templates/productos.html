@@ -39,7 +39,9 @@
                   <td>{{producto.precio}}</td> 
                   <td>{{producto.description}}</td> 
                   <td>
-                        <form action="{% url 'eliminar'%}">
+                        <form action="{% url 'eliminar' producto.id %}" method="post">
+                            {%csrf_token%}
+                            <button class= "btn btn-danger">Eliminar</button>
 
                         </form>
                   </td>    
