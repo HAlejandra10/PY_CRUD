@@ -3,7 +3,9 @@
 {% block content %}
 
     {% if message %}
-
+        {%for message in messages%}
+            <div class="alert alert-success">{{message}}</div>
+        {%endfor%}
     {% endif %}
 
     <h2 class="text-center">PRODUCTOS</h2>
