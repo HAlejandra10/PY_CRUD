@@ -38,7 +38,11 @@
                   <td>{{producto.nombre}}</td>
                   <td>{{producto.precio}}</td> 
                   <td>{{producto.description}}</td> 
-                  <td></td>    
+                  <td>
+                        <form action="{% url 'eliminar'%}">
+
+                        </form>
+                  </td>    
             </tr>
     {% endfor %}
     </table>
