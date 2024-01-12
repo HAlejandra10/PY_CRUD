@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from tienda.models import Productos
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -19,6 +20,7 @@ def guardar(request):
     descrip= request.POST["description"]
     p = Productos(nombre= n, precio=price, description=descrip) #crear product ,el nombre= es el mismo nombre que está en models.py
     p.save()
+    messages.success(request, 'Producto Agregado')
     return redirect('consultar')
     
     
