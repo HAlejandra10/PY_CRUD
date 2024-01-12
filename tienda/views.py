@@ -22,5 +22,8 @@ def guardar(request):
     p.save()
     messages.success(request, 'Producto Agregado')
     return redirect('consultar')
+
+def eliminar(request):
+    pass
     
     
