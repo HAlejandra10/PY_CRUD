@@ -5,15 +5,15 @@
     <h2 class="text-center">PRODUCTOS</h2>
 
 
-    <form class="w-50 shadow mx-auto p-4 m-3" method="post" action="productos/guardar">
+    <form class="w-50 shadow mx-auto p-4 m-3" method="post" action="{% url 'editar' %}">
         {%csrf_token %}
-        Nombre: <input type="text" name="nombre" class="form-control my-2" required/>
+        Nombre: <input type="text" name="nombre" class="form-control my-2" required value={{producto.nombre}}/>
 
-        Precio: <input type="number" name="precio" class="form-control my-2" required />
+        Precio: <input type="number" name="precio" class="form-control my-2" required value={{producto.precio}/>
 
         Descripción: 
         <textarea class="form-control my-2" name="description">
-             
+            {{producto.description}}
         </textarea>
 
         <input type="submit" value="Guardar" class="btn btn-primary"/>
