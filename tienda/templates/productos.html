@@ -41,7 +41,7 @@
                   <td>
                         <form action="{% url 'eliminar' producto.id %}" method="post">
                             {% csrf_token %}
-                            <button class= "btn btn-danger">
+                            <button class= "btn btn-danger" onclick="return confirm('Deseas eliminar este producto')">
                                 🗑
                             </button>
                         </form>
