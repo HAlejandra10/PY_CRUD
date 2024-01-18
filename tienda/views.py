@@ -23,7 +23,9 @@ def guardar(request):
     messages.success(request, 'Producto Agregado')
     return redirect('consultar')
 
-def eliminar(request):
-    pass
-    
-    
+def eliminar(request, id): 
+    #pass
+    producto = Productos.objects.filter(pk=id)
+    producto.delete()
+    messages.success(request, 'Producto Eliminados')
+    return redirect('consultar')    
