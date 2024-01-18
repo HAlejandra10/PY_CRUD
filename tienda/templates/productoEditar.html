@@ -9,9 +9,10 @@
         {%csrf_token %}
 
         <input type="hidden" name="id" value="{{producto.id}}"/>
-        Nombre: <input type="text" name="nombre" class="form-control my-2" required value={{producto.nombre}}/>
 
-        Precio: <input type="number" name="precio" class="form-control my-2" required value={{producto.precio}/>
+        Nombre: <input type="text" name="nombre" class="form-control my-2" required value={{producto.nombre}} />
+
+        Precio: <input type="number" step="any" name="precio" class="form-control my-2" required value={{producto.precio}} />
 
         Descripción: 
         <textarea class="form-control my-2" name="description">

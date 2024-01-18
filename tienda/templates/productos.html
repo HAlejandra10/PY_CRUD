@@ -15,8 +15,7 @@
         {%csrf_token %}
         Nombre: <input type="text" name="nombre" class="form-control my-2" required/>
 
-        Precio: <input type="number" name="precio" class="form-control my-2" required />
-
+        Precio: <input type="number" step="any" name="precio" class="form-control my-2" required />
         Descripción: 
         <textarea class="form-control my-2" name="description">
              
@@ -41,7 +40,7 @@
                   <td>
                         <form action="{% url 'eliminar' producto.id %}" method="post">
                             {% csrf_token %}
-                            <button class= "btn btn-danger" onclick="return confirm('Deseas eliminar este producto')">
+                            <button class= "btn btn-danger" onclick="return confirm('Deseas eliminar este producto?')">
                                 🗑
                             </button>
                         </form>

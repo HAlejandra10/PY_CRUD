@@ -24,7 +24,7 @@ urlpatterns = [
     path('', views.home, name="inicio"),
     path('productos', views.consulproducts, name="consultar"),
     path('productos/guardar', views.guardar, name="guardar"),
-    path('productos/guardar/<int:id>', views.eliminar, name="eliminar"),
+    path('productos/eliminar/<int:id>', views.eliminar, name="eliminar"),
     path('productos/detalle/<int:id>', views.detalle, name="detalle"), #show form
     path('productos/editar', views.editar, name="editar"), #do udate
     

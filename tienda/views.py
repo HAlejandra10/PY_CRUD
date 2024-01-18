@@ -27,9 +27,9 @@ def eliminar(request, id):
     #pass
     producto = Productos.objects.filter(pk=id)
     producto.delete()
-    messages.success(request, 'Producto Eliminados')
+    messages.success(request, 'Producto Eliminado')
     return redirect('consultar')    
-
+ 
 def detalle(request, id): 
     #pass
     producto = Productos.objects.get(pk=id)
