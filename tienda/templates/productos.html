@@ -47,11 +47,12 @@
                         </form>
                   </td>
                   <td>
-                    <form action="{% url 'eliminar' producto.id %}" method="post">
+                    <form action="{% url 'detalle' producto.id %}" method="post">
                         {% csrf_token %}
-                        <button class= "btn btn-danger" onclick="return confirm('Deseas eliminar este producto')">
-                            🗑
+                        <button class= "btn btn-edit">
+                            <i class="fa-solid fa-pencil"></i>
                         </button>
+                        
                     </form>
               </td>        
             </tr>
