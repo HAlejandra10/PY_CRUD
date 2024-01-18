@@ -36,3 +36,12 @@ def detalle(request, id):
     return render(request,"productoEditar.html", {
         'producto': producto
     })  
+    
+def editar(request): 
+    n= request.POST["nombre"] 
+    price= request.POST["precio"]
+    descrip= request.POST["description"]
+    id= request.POST["id"]
+    Productos.objects.filter(pk=id).update(id=id, nombre=n, precio=price, description=descrip)
+    messages.success(request, 'Producto Actualizado')
+    return redirect('consultar')
