@@ -29,3 +29,10 @@ def eliminar(request, id):
     producto.delete()
     messages.success(request, 'Producto Eliminados')
     return redirect('consultar')    
+
+def detalle(request, id): 
+    #pass
+    producto = Productos.objects.get(pk=id)
+    return render(request,"productoEditar.html", {
+        'producto': producto
+    })  
